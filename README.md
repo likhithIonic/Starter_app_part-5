@@ -14,7 +14,7 @@ This part -5 of the exploring Appflow exercise consists of the following topics 
 
 Now that you are well versed with triggering different builds in appflow it's time to automate builds.
 
-You can leverage the automation available in a appflow dashboard to automatically trigger the different builds on commit to you Git.
+You can leverage the automation available in the appflow dashboard to automatically trigger the different builds on commit to your Git.
 
 Automations enable you and your team to utilize the full CI/CD powers of Appflow. You can create automations that trigger package builds and deploy builds every time your team checks in new code to a given branch and you can even configure the automations to use different environments and native configurations so that you can build different versions of your app for development, staging, and production.
 
@@ -32,7 +32,7 @@ Next, fill in the configuration options:
 * **Name:** The name of the automation.
 * **Git Branch:** The branch you'd like to trigger the automation from (ex: master). Note: The asterisk (\*) will match anything.
 * **Automation Type:**  Since, we are doing automation for android, select Package build.
-* **Environments:** You can include any enviroments that can be used by this automations. Donot select any environments for now.
+* **Environments:** You can include any environments that can be used by this automation. Donot select any environments for now.
 * **Native configuration:** You can include any Native configuration that can be used by this automations. Donot select any Native configuration for now.
 
 ![Appflow](images/img5_2.png)
@@ -68,7 +68,7 @@ Deploy Channels so that you can install all the environments on a single device 
 
 ![Appflow](images/img5_4.png)<br><br>
 
-3. Now, you can use this Native Configuration in conjuction with an Automation to create a QA build each and everytime you push a commit to a specfic branch.To create the automation you can enter the branch and simply select QA native config from the drop down.
+3. Now, you can use this Native Configuration in conjunction with an Automation to create a QA build each and every time you push a commit to a specific branch.To create the automation you can enter the branch and simply select QA native config from the drop down.
 
 ![Appflow](images/img5_5.png)<br><br>
 
@@ -81,7 +81,7 @@ Deploy Channels so that you can install all the environments on a single device 
 
 Environments give you a way to customize the build process for your application in order to produce different versions of your applications for different environments from the same code base. All environment variables are accessible to any build scripts that run during the npm run install and npm run build portion of your builds.
 
-There are few pre-defined environment variables that are available for every build. To know more about all the variable and examples on how to use them refer the [Documentation on environments.](https://ionicframework.com/docs/appflow/automation/environments#predefined-environments)
+There are few predefined environment variables that are available for every build. To know more about all the variables and examples on how to use them refer to the [Documentation on environments.](https://ionicframework.com/docs/appflow/automation/environments#predefined-environments)
 
 
 ### Custom environments and scripting
@@ -113,7 +113,7 @@ The environments dashboard also lists available custom environments along with t
 
 ![Appflow](images/img5_7.png)<br><br>
 
-Now, let's try modifying the build script in your package.json file to build for prodcution only when certain environment is passed.
+Now, let's try modifying the build script in your package.json file to build for production only when a certain environment is passed.
 
 ```
 // customize the build script in the package.json
@@ -134,8 +134,8 @@ Commit the changes made to your package.json file and trigger a new build with t
 
 ![Appflow](images/img5_8.png)<br><br>
 
-* You can also add the same environment in your automations and in addtion to Native configurations as well to futher enhance your CI/CD capabilities.
-* You can also try replacing the build script with your own bask script that triggers builds based on pre-defined environments. Refer [here](https://ionicframework.com/docs/appflow/automation/environments#usage)
+* You can also add the same environment in your automations and in addition to Native configurations as well to further enhance your CI/CD capabilities.
+* You can also try replacing the build script with your own bash script that triggers builds based on pre-defined environments. Refer [here](https://ionicframework.com/docs/appflow/automation/environments#usage)
 
 Reference: https://indepth.dev/becoming-an-angular-environmentalist/
 
